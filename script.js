@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
           removebtn.className = "px-4 py-2 bg-red-500 hover:bg-red-600 rounded text-white";
           removebtn.textContent = "Remove";
           removebtn.addEventListener("click", () => {
-            cart.splice(index, 1); // FIXED: Use splice not slice
+            cart.splice(index, 1);
             savecart();
             rendercart();
           });
