@@ -5,22 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white flex justify-center items-center h-screen ">
-  <div id="container" class="w-full max-w-md p-6 bg-gray-700 rounded-lg shadow-lg">
-    <h1 class="text-2xl font-bold text-center mb-4">Products</h1>
-    <div class="flex gap-2 mb-4" id="product-list">
-        <!-- Products will be dynamically added here by Javascript-->
+<body class="bg-gradient-to-br from-indigo-800 via-purple-800 to-pink-700 text-white min-h-screen flex justify-center items-center p-6">
+  <div id="container" class="w-full max-w-5xl bg-black/40 backdrop-blur-md rounded-lg shadow-lg p-6 flex gap-6">
+  
+    <!-- LEFT COLUMN: Product List -->
+    <div class="w-1/2">
+      <h1 class="text-2xl font-bold text-center mb-4">🛍️ Products</h1>
+      <div class="flex flex-col gap-4" id="product-list">
+        <!-- Products will be dynamically added here by JavaScript -->
+      </div>
     </div>
 
-    <h2>Shopping cart</h2>
-    <div id="cart-items">
-        <p id="empty-cart">Your cart is empty.</p>
+    <!-- RIGHT COLUMN: Shopping Cart -->
+    <div class="w-1/2">
+      <h2 class="text-2xl font-semibold text-center mb-4">🛒 Shopping Cart</h2>
+      <div id="cart-items" class="flex flex-col gap-2 mb-4">
+        <p id="empty-cart" class="text-gray-300 italic">Your cart is empty.</p>
+      </div>
+
+      <div id="cart-total" class="hidden">
+        <p class="mb-2 text-lg">Total: <span id="total-price" class="font-semibold text-green-300">₹0.00</span></p>
+        <button class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg w-full" id="checkout-btn">
+          Checkout
+        </button>
+      </div>
     </div>
-    <div id="cart-total" class="hidden">
-        <p>Total: <span id="total-price">$0.00</span></p>
-        <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg" id="checkout-btn">Checkout</button>
-    </div>
+
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
